@@ -6,7 +6,7 @@ OPTIPNG="/usr/bin/optipng"
 INDEX="assets.txt"
 
 for variant in '' '-dark'; do
-  for color in '-sea' '-aliz' '-azul' '-pueril'; do
+  for color in '-sea' '-leaf' '-aliz' '-azul' '-pueril'; do
 
     ASSETS_DIR="assets${variant}${color}"
     SRC_FILE="assets${variant}${color}.svg"
@@ -15,7 +15,7 @@ for variant in '' '-dark'; do
 
     for i in `cat $INDEX`
     do
-    if [ -f $ASSETS_DIR/$i.png ]; then
+    if [ -f $ASSETS_DIR/$i.png ] && [ $color != '-leaf' ]; then
         echo $ASSETS_DIR/$i.png exists.
     else
         echo
