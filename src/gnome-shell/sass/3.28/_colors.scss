@@ -33,6 +33,7 @@ $insensitive_tertiary_selected_fg_color: scale-alpha($tertiary_selected_fg_color
 
 // Background colors
 $base_color: if($variant =='light', #ffffff, #1b2224);
+@if $color=='leaf' { $base_color: if($variant =='light', #ffffff, #121513); }
 @if $color=='aliz' or $color=='pueril' { $base_color: if($variant =='light', #ffffff, #222222); }
 @if $color=='azul' { $base_color: if($variant =='light', #ffffff, #1b1d24); }
 
@@ -41,7 +42,7 @@ $bg_color: scale-alpha(#000000, $middle_opacity);
 $osd_bg_color: scale-alpha(#000000, $lower_opacity);
 $overview_bg_color: scale-alpha(#ffffff, 0.10);
 $topbar_color: #1b2224;
-@if $color=='sea' { $topbar_color: #1b2224; }
+@if $color=='leaf' { $topbar_color: #121513; }
 @if $color=='aliz' or $color=='pueril' { $topbar_color: #222222; }
 @if $color=='azul' { $topbar_color: #1b1d24; }
 
@@ -51,6 +52,7 @@ $topbar_overview_color: rgba(#ffffff, 0.08);
 $topbar_active_color: rgba(#ffffff, 0.15);
 
 $selected_bg_color: #2eb398;
+@if $color=='leaf' { $selected_bg_color: #98b32e; }
 @if $color=='aliz' { $selected_bg_color: #F0544C; }
 @if $color=='azul' { $selected_bg_color: #3498db; }
 @if $color=='pueril' { $selected_bg_color: #97BB72; }
